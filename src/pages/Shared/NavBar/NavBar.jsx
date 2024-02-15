@@ -4,17 +4,13 @@ const NavBar = () => {
   const navOptions = (
     <>
       <li>
-        <Link className=" text-blue-600" to="/">
-          Home
-        </Link>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <Link className=" text-blue-600" to="/menu">
-          Our Menu
-        </Link>
+        <Link to="/menu">Our Menu</Link>
       </li>
       <li>
-        <a className=" text-blue-600">Item 2</a>
+        <Link to="/order">Order Food</Link>
       </li>
     </>
   );
