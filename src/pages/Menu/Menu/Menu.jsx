@@ -23,7 +23,7 @@ const Menu = () => {
       </Helmet>
       <Cover
         img={menuImg}
-        title="Our Menu"
+        title="our menu"
         subTitle="Would you like to try a dish?"
       ></Cover>
       {/* main cover */}
@@ -36,13 +36,13 @@ const Menu = () => {
       {/* dessert menu items */}
       <MenuCategory
         items={desserts}
-        title="Dessert"
+        title="dessert"
         img={dessertImg}
       ></MenuCategory>
       {/* pizza menu item */}
-      <MenuCategory items={pizza} img={pizzaImg} title="Pizza"></MenuCategory>
-      <MenuCategory items={salad} img={saladImg} title="Salad"></MenuCategory>
-      <MenuCategory items={soup} img={soupImg} title="Soup"></MenuCategory>
+      <MenuCategory items={pizza} img={pizzaImg} title="pizza"></MenuCategory>
+      <MenuCategory items={salad} img={saladImg} title="salad"></MenuCategory>
+      <MenuCategory items={soup} img={soupImg} title="soup"></MenuCategory>
     </div>
   );
 };
