@@ -46,7 +46,7 @@ const NavBar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl hover:bg-green-400">
-            Bistro Restaurant
+            Bistro Boss Restaurant
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
