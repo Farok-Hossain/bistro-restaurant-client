@@ -64,13 +64,24 @@ const SignUp = () => {
                   required: true,
                   minLength: 6,
                   maxLength: 20,
+                  pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
                 })}
                 placeholder="password"
                 className="input input-bordered"
-                required
               />
-              {errors.password?.type === "required" && (
-                <p className=" text-red-600">Password is required</p>
+              {errors.password?.type === "minLength" && (
+                <p className=" text-red-600">Password must be 6 characters</p>
+              )}
+              {errors.password?.type === "maxLength" && (
+                <p className=" text-red-600">
+                  Password must be less than 20 characters
+                </p>
+              )}
+              {errors.password?.type === "pattern" && (
+                <p className=" text-red-600">
+                  Password must have one uppercase, one lowercase, one number
+                  and one special characters
+                </p>
               )}
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
