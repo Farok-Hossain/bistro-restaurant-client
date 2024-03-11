@@ -31,7 +31,7 @@ const NavBar = () => {
           <button className="btn">
             <FaShoppingCart className="mr-2"></FaShoppingCart>
 
-            <div className="badge badge-secondary">+99</div>
+            <div className="badge badge-secondary">+0</div>
           </button>
         </Link>
       </li>
