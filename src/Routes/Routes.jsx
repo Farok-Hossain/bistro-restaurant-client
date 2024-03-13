@@ -12,6 +12,7 @@ import Cart from "../pages/Dashboard/Cart/Cart";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import Reservation from "../pages/Dashboard/Reservation/Reservation";
 import Review from "../pages/Dashboard/Review/Review";
+import Booking from "../pages/Dashboard/Booking/Booking";
 
 export const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ export const router = createBrowserRouter([
       {
         path: "review",
         element: <Review></Review>,
+      },
+      {
+        path: "booking",
+        element: <Booking></Booking>,
       },
     ],
   },

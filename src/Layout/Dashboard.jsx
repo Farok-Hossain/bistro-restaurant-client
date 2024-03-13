@@ -1,4 +1,5 @@
 import { FaCalendar, FaHome, FaShoppingCart } from "react-icons/fa";
+import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { MdReviews } from "react-icons/md";
 import { NavLink, Outlet } from "react-router-dom";
 
@@ -6,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       {/* dashboard side bar */}
-      <div className=" w-64 min-h-full bg-orange-400">
+      <div className=" w-64 min-h-screen bg-orange-400">
         <ul className="menu p-4">
           <li>
             <NavLink to="/dashboard/userHome">
@@ -30,6 +31,12 @@ const Dashboard = () => {
             <NavLink to="/dashboard/review">
               <MdReviews></MdReviews>
               Add Review
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard/booking">
+              <BsFillBookmarkStarFill></BsFillBookmarkStarFill>
+              My Booking
             </NavLink>
           </li>
         </ul>
