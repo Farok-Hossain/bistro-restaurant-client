@@ -2,8 +2,10 @@ import { FaCalendar, FaHome, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { MdReviews } from "react-icons/md";
 import { NavLink, Outlet } from "react-router-dom";
+import useCart from "../hooks/usecart";
 
 const Dashboard = () => {
+  const [cart] = useCart();
   return (
     <div className="flex">
       {/* dashboard side bar */}
@@ -24,7 +26,7 @@ const Dashboard = () => {
           <li>
             <NavLink to="/dashboard/cart">
               <FaShoppingCart></FaShoppingCart>
-              My Cart
+              My Cart ({cart.length})
             </NavLink>
           </li>
           <li>
