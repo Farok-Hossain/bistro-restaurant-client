@@ -1,4 +1,10 @@
-import { FaCalendar, FaHome, FaSearch, FaShoppingCart } from "react-icons/fa";
+import {
+  FaCalendar,
+  FaEnvelope,
+  FaHome,
+  FaSearch,
+  FaShoppingCart,
+} from "react-icons/fa";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { MdReviews } from "react-icons/md";
 import { NavLink, Outlet } from "react-router-dom";
@@ -6,6 +12,10 @@ import useCart from "../hooks/usecart";
 
 const Dashboard = () => {
   const [cart] = useCart();
+
+  // TODO: get isAdmin value from the database
+  const isAdmin = true;
+
   return (
     <div className="flex">
       {/* dashboard side bar */}
@@ -41,6 +51,8 @@ const Dashboard = () => {
               My Booking
             </NavLink>
           </li>
+
+          {/* shared nav links */}
           <div className="divider"></div>
           <li>
             <NavLink to="/">
@@ -52,6 +64,12 @@ const Dashboard = () => {
             <NavLink to="/order/salad">
               <FaSearch></FaSearch>
               Menu
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/order/contact">
+              <FaEnvelope></FaEnvelope>
+              Contact
             </NavLink>
           </li>
         </ul>
