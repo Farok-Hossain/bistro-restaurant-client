@@ -13,6 +13,7 @@ import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import Reservation from "../pages/Dashboard/Reservation/Reservation";
 import Review from "../pages/Dashboard/Review/Review";
 import Booking from "../pages/Dashboard/Booking/Booking";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 
 export const router = createBrowserRouter([
   {
@@ -51,7 +52,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "cart",
@@ -72,6 +77,10 @@ export const router = createBrowserRouter([
       {
         path: "booking",
         element: <Booking></Booking>,
+      },
+      {
+        path: "users",
+        element: <AllUsers></AllUsers>,
       },
     ],
   },
