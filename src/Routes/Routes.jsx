@@ -14,6 +14,8 @@ import Reservation from "../pages/Dashboard/Reservation/Reservation";
 import Review from "../pages/Dashboard/Review/Review";
 import Booking from "../pages/Dashboard/Booking/Booking";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import AddItems from "../pages/Dashboard/AddItems/AddItems";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
   {
@@ -58,6 +60,7 @@ export const router = createBrowserRouter([
       </PrivateRoute>
     ),
     children: [
+      // normal user routes
       {
         path: "cart",
         element: <Cart></Cart>,
@@ -78,9 +81,23 @@ export const router = createBrowserRouter([
         path: "booking",
         element: <Booking></Booking>,
       },
+
+      // admin only routes
       {
         path: "users",
-        element: <AllUsers></AllUsers>,
+        element: (
+          <AdminRoute>
+            <AllUsers></AllUsers>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "addItems",
+        element: (
+          <AdminRoute>
+            <AddItems></AddItems>
+          </AdminRoute>
+        ),
       },
     ],
   },
