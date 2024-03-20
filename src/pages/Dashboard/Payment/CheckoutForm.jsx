@@ -7,6 +7,7 @@ import useAuth from "../../../hooks/useAuth";
 const CheckoutForm = () => {
   const [error, setError] = useState("");
   const [clientSecrets, setClientSecrets] = useState("");
+  const [transactionId, setTransactionId] = useState("");
   const stripe = useStripe();
   const elements = useElements();
   const axiosSecure = useAxiosSecure();
@@ -51,8 +52,8 @@ const CheckoutForm = () => {
         await stripe.confirmCardPayment(clientSecrets, {
           payment_method: {
             card: card,
-            billing_datails: {
-              email: user?.email || "anonumous",
+            billing_details: {
+              email: user?.email || "anonymous",
               name: user?.displayName || "anonymous",
             },
           },
@@ -61,6 +62,10 @@ const CheckoutForm = () => {
         console.log("confirm error");
       } else {
         console.log("payment intent", paymentIntent);
+        if (paymentIntent.status === "succeeded") {
+          console.log("transaction id", paymentIntent.id);
+          setTransactionId(paymentIntent.id);
+        }
       }
     }
   };
@@ -91,6 +96,9 @@ const CheckoutForm = () => {
         Pay
       </button>
       <p className=" text-red-600">{error}</p>
+      {transactionId && (
+        <p className="text-green-600">Your transaction id: {transactionId}</p>
+      )}
     </form>
   );
 };
