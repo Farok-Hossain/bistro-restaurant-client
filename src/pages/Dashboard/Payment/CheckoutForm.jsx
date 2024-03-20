@@ -1,10 +1,28 @@
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useCart from "../../../hooks/useCart";
+import useAuth from "../../../hooks/useAuth";
 
 const CheckoutForm = () => {
   const [error, setError] = useState("");
+  const [clientSecrets, setClientSecrets] = useState("");
   const stripe = useStripe();
   const elements = useElements();
+  const axiosSecure = useAxiosSecure();
+  const [cart] = useCart();
+  const { user } = useAuth();
+  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+
+  useEffect(() => {
+    axiosSecure
+      .post("/create-payment-intent", { price: totalPrice })
+      .then((res) => {
+        console.log(res.data.clientSecret);
+        setClientSecrets(res.data.clientSecret);
+      });
+  }, [axiosSecure, totalPrice]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!stripe || !elements) {
@@ -27,6 +45,23 @@ const CheckoutForm = () => {
     } else {
       console.log("payment method", paymentMethod);
       setError("");
+
+      // confirm payment
+      const { paymentIntent, error: confirmError } =
+        await stripe.confirmCardPayment(clientSecrets, {
+          payment_method: {
+            card: card,
+            billing_datails: {
+              email: user?.email || "anonumous",
+              name: user?.displayName || "anonymous",
+            },
+          },
+        });
+      if (confirmError) {
+        console.log("confirm error");
+      } else {
+        console.log("payment intent", paymentIntent);
+      }
     }
   };
 
@@ -51,7 +86,7 @@ const CheckoutForm = () => {
       <button
         className=" btn btn-sm btn-primary my-4"
         type="submit"
-        disabled={!stripe}
+        disabled={!stripe || !clientSecrets}
       >
         Pay
       </button>
