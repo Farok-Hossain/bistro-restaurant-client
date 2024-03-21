@@ -9,10 +9,9 @@ import {
   FaUsers,
   FaUtensils,
 } from "react-icons/fa";
-import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { MdReviews } from "react-icons/md";
 import { NavLink, Outlet } from "react-router-dom";
-import useCart from "../hooks/usecart";
+import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
@@ -85,10 +84,11 @@ const Dashboard = () => {
                   Add Review
                 </NavLink>
               </li>
+
               <li>
-                <NavLink to="/dashboard/booking">
-                  <BsFillBookmarkStarFill></BsFillBookmarkStarFill>
-                  My Booking
+                <NavLink to="/dashboard/paymentHistory">
+                  <FaList></FaList>
+                  Real Payment History
                 </NavLink>
               </li>
             </>
