@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -14,6 +14,13 @@ const Footer = () => {
           className="text-green-500 text-3xl"
         >
           <FaLinkedin />
+        </Link>
+        <Link
+          to="https://github.com/Farok-Hossain"
+          target="_blank"
+          className="text-green-500 text-3xl"
+        >
+          <FaGithub />
         </Link>
         <Link
           to="https://www.facebook.com/profile.php?id=100006429429427"
