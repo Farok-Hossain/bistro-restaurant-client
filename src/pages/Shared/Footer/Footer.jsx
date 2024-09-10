@@ -6,7 +6,9 @@ const Footer = () => {
   return (
     <div className="bg-slate-600 h-28">
       <br />
-      <h2 className="text-center text-green-500 mb-3">Social Platforms</h2>
+      <h2 className="text-2xl uppercase text-center text-pink-500 mb-3">
+        Social Platforms
+      </h2>
       <div className="flex flex-row justify-center gap-6">
         <Link
           to="https://www.linkedin.com/in/farok-hossain-008444202/"

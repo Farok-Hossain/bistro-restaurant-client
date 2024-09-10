@@ -44,9 +44,11 @@ const NavBar = () => {
       <li>
         <Link to="/dashboard/cart">
           <button className="btn">
-            <FaShoppingCart className="mr-2"></FaShoppingCart>
+            <FaShoppingCart className="mr-2 mt-[-20px]"></FaShoppingCart>
 
-            <div className="badge badge-secondary">+{cart.length}</div>
+            <div className="badge badge-secondary  mt-[-20px]">
+              +{cart.length}
+            </div>
           </button>
         </Link>
       </li>
@@ -95,7 +97,7 @@ const NavBar = () => {
               {navOptions}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl hover:bg-green-400">
+          <a className="btn btn-ghost text-xl hover:bg-green-400 hover:text-purple-500 mt-[-28px]">
             Bistro Boss Restaurant
           </a>
         </div>
@@ -103,7 +105,7 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-success ">Button</a>
+          <a className="btn btn-success mt-[-24px] mr-10 ">Button</a>
         </div>
       </div>
     </>
