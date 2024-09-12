@@ -104,9 +104,6 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn btn-success mt-[-24px] mr-10 ">Button</a>
-        </div>
       </div>
     </>
   );
