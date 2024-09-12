@@ -27,10 +27,10 @@ const SocialLogin = () => {
       <div>
         <button
           onClick={handleGoogleSignIn}
-          className="btn text-blue-600 text-md"
+          className="btn text-blue-600 text-md w-40 h-16 bg-slate-200"
         >
-          <FcGoogle className="mr-2 text-xl"></FcGoogle>
-          <h1>
+          <FcGoogle className="mr-2 text-3xl"></FcGoogle>
+          <h1 className="text-2xl">
             G<span className="text-red-600">o</span>
             <span className="text-yellow-500">o</span>
             <span>g</span>
