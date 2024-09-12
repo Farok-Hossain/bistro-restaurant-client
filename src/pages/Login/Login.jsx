@@ -74,7 +74,7 @@ const Login = () => {
               Login now<span className="text-pink-600">!</span>
             </h1>
             <p className="py-6">
-              click here and please order some sufer delicious food
+              click here and please order some super delicious food
             </p>
           </div>
           <div className="card md:w-full shadow-2xl bg-base-100">

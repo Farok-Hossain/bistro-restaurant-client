@@ -97,7 +97,7 @@ const NavBar = () => {
               {navOptions}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl hover:bg-green-400 hover:text-purple-500 mt-[-28px]">
+          <a className="btn btn-ghost text-xl hover:bg-green-600 hover:text-pink-600 mt-[-28px]">
             Bistro Boss Restaurant
           </a>
         </div>
