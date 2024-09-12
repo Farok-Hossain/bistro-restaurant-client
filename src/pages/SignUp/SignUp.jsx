@@ -58,13 +58,16 @@ const SignUp = () => {
 
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold text-green-600 ml-10">
+          <div className="text-center lg:text-left ml-10">
+            <h1 className="text-5xl font-bold text-green-600 ">
               Sign Up now<span className="text-pink-600">!</span>
             </h1>
-            <p className="py-6"></p>
+            <p className="py-6">
+              By creating an account, you agree to our Privacy Policy and
+              Delivery Terms & Conditions
+            </p>
           </div>
-          <div className="card shrink-0 w-full md:w-[110%] lg:w-[70%] shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full md:w-[110%] lg:w-[50%] shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
