@@ -69,7 +69,7 @@ const Login = () => {
       </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center md:w-1/2 lg:text-left">
+          <div className="ml-10 text-center md:w-1/2 lg:text-left">
             <h1 className="text-5xl font-bold text-green-600">
               Login now<span className="text-pink-600">!</span>
             </h1>
@@ -77,7 +77,7 @@ const Login = () => {
               click here and please order some sufer delicious food
             </p>
           </div>
-          <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
+          <div className="card md:w-full shadow-2xl bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">

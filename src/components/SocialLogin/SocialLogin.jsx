@@ -32,9 +32,9 @@ const SocialLogin = () => {
           <FcGoogle className="mr-2 text-3xl"></FcGoogle>
           <h1 className="text-2xl">
             G<span className="text-red-600">o</span>
-            <span className="text-yellow-500">o</span>
+            <span className="text-yellow-400">o</span>
             <span>g</span>
-            <span className="text-green-500">l</span>
+            <span className="text-green-600">l</span>
             <span className="text-red-600">e</span>
           </h1>
         </button>
