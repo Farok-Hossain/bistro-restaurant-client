@@ -67,7 +67,7 @@ const Login = () => {
       <Helmet>
         <title>Bistro Boss | Login</title>
       </Helmet>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-300">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="ml-10 text-center md:w-1/2 lg:text-left">
             <h1 className="text-5xl font-bold text-green-600">
