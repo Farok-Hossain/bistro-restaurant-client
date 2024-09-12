@@ -58,7 +58,7 @@ const SignUp = () => {
 
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left ml-10">
+          <div className="text-center w-[80%] md:w-[65%] lg:w-[50%] lg:ml-12 lg:text-left ">
             <h1 className="text-5xl font-bold text-green-600 ">
               Sign Up now<span className="text-pink-600">!</span>
             </h1>
@@ -67,7 +67,7 @@ const SignUp = () => {
               Delivery Terms & Conditions
             </p>
           </div>
-          <div className="card shrink-0 w-full md:w-[110%] lg:w-[50%] shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-[80%] md:w-[65%] lg:w-[50%] shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
