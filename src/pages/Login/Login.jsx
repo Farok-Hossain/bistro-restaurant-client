@@ -103,7 +103,10 @@ const Login = () => {
                   required
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
+                  <a
+                    href="#"
+                    className="label-text-alt link text-sm link-hover"
+                  >
                     Forgot password?
                   </a>
                 </label>

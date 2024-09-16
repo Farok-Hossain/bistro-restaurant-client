@@ -143,7 +143,10 @@ const SignUp = () => {
                   </p>
                 )}
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
+                  <a
+                    href="#"
+                    className="label-text-alt text-sm link link-hover"
+                  >
                     Forgot password?
                   </a>
                 </label>
